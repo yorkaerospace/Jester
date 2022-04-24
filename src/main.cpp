@@ -41,7 +41,7 @@ void setup() {
   } else {
     // Configure MPU settings
     mpu.setAccelerometerRange(MPU6050_RANGE_16_G);
-    mpu.setGyroRange(MPU6050_RANGE_250_DEG);
+    mpu.setGyroRange(MPU6050_RANGE_2000_DEG);
     mpu.setFilterBandwidth(MPU6050_BAND_21_HZ);
     mpu.setTemperatureStandby(true);
   }
