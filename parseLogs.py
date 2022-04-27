@@ -12,7 +12,7 @@ dt = np.dtype([
     ('gyro_x', 'f4'), ('gyro_y', 'f4'), ('gyro_z', 'f4'),
     ('acc_x',  'f4'), ('acc_y',  'f4'), ('acc_z',  'f4')
     ])
-data = np.fromfile("log_files/43.log", dtype=dt)
+data = np.fromfile("log_files/example.log", dtype=dt)
 df = pd.DataFrame(data)
 df["delta_ms"] = (df["time_us"] - df['time_us'].shift(1))/1000
 df["time"] = df["time_us"] / 1e6
