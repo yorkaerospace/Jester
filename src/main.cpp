@@ -4,7 +4,7 @@
 #include <Adafruit_Sensor.h>
 #include <SdFat.h>
 
-#define SD_CS 10
+#define SD_CS D8
 #define BUFFER_LEN 5 // This is as much as the nano really fits
 #define SPI_SPEED SD_SCK_MHZ(8) // This is as fast as the arduino goes
 
