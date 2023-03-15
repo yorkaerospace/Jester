@@ -1,3 +1,4 @@
+#!/bin/env python3
 import sys
 
 import numpy as np
@@ -19,4 +20,9 @@ LOG_DATA_TYPE = np.dtype([
 
 if __name__ == "__main__":
     data = np.fromfile(sys.argv[1], dtype=LOG_DATA_TYPE)
-    pd.DataFrame(data).to_csv("out.csv")
+    try:
+        outfile = sys.argv[2]
+    except IndexError:
+        outfile = "out.csv"
+
+    pd.DataFrame(data).to_csv(outfile)
